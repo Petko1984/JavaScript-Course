@@ -1,0 +1,20 @@
+var shopping_cart = [
+	{ product : 'T-shirt', price : 10 },
+	{ product : 'Jeans', price : 69.9 },
+   { product : 'Jacket', price : 119.99 }
+];
+
+for (var i=0;i<3;i++){ 
+var fixed_price=shopping_cart[i].price.toFixed(2);
+var price_lenght = (fixed_price).toString().length;
+var product_lenght = (shopping_cart[i].product).toString().length;
+var number_of_spaces = 65 - (price_lenght + product_lenght);//how many spaces to add
+
+var space = "";//store our spaces
+for (var s = 0; s < number_of_spaces; s++)
+{
+space = space + " ";
+}
+console.log(shopping_cart[i].product + space + fixed_price);
+	
+}
